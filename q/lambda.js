@@ -9,13 +9,13 @@ exports.handler = function (event, context, callback) {
     }).promise()
         .then(data => {
             console.log(data);
-            console.log(event);
+            //console.log(https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa);
             // your code goes here
         })
         .catch(err => {
             console.log(err);
             // error handling goes here
         });
-
-    callback(null, { "message": "Successfully executed" });
+callback(event);
+    //callback(null, { "message": "Successfully executed" });
 }
