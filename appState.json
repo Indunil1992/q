@@ -1,0 +1,111 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "fb3e86b2-56bc-44cc-8dd2-070030407b0a": {
+        "id": "fb3e86b2-56bc-44cc-8dd2-070030407b0a",
+        "parent": null,
+        "name": "q",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "3163a196-1436-40fe-8b51-6cfcd6db73ef"
+        ],
+        "isRemovable": false,
+        "filePath": "q"
+      },
+      "3163a196-1436-40fe-8b51-6cfcd6db73ef": {
+        "id": "3163a196-1436-40fe-8b51-6cfcd6db73ef",
+        "parent": "fb3e86b2-56bc-44cc-8dd2-070030407b0a",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "q/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1sachithraAPInameqaany",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "rootNode": "fb3e86b2-56bc-44cc-8dd2-070030407b0a",
+    "openFiles": [
+      "3163a196-1436-40fe-8b51-6cfcd6db73ef"
+    ],
+    "currentFileId": "3163a196-1436-40fe-8b51-6cfcd6db73ef",
+    "resources": {
+      "apigusEast1sachithraAPInameqaany": {
+        "name": "apigusEast1sachithraAPInameqaany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "sachithraAPIname",
+          "apiId": "052p9kjn18",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "zrjp6rdv3b",
+          "existingResources": {
+            "/indunil": "gv2c1w",
+            "/indunil/qa/tst": "r6hp77",
+            "/indunil/qa": "yptvr5",
+            "/": "zrjp6rdv3b"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/indunil/qa",
+          "resourceName": "qa",
+          "resourceId": "yptvr5",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test11",
+          "stageDeploymentId": "5oosz2",
+          "mode": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "q",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568519061457
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "q",
+      "url": "https://github.com/Indunil1992/q"
+    }
+  }
+}
