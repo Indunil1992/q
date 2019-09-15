@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "q/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.subscribe({\n        Protocol: 'https',\n        Endpoint: 'https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa\t',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:TestSNS'\n    }).promise()\n        .then(data => {\n            console.log(data);\n            //console.log(https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa);\n            // your code goes here\n        })\n        .catch(err => {\n            console.log(err);\n            // error handling goes here\n        });\ncallback(event);\n    //callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.subscribe({\n        Protocol: 'https',\n        Endpoint: 'https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa\t',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:TestSNS'\n    }).promise()\n        .then(data => {\n            console.log(data);\n            console.log(context);\n            // your code goes here\n        })\n        .catch(err => {\n            console.log(err);\n            // error handling goes here\n        });\n//callback(event);\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -128,7 +128,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568519898937
+    "lastSave": 1568522633309
   },
   "VCS_STATE": {
     "provider": "GitHub",
