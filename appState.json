@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "q/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.subscribe({\n        Protocol: 'https',\n        Endpoint: 'https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa\t',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:TestSNS'\n    }).promise()\n        .then(data => {\n            console.log(data);\n            // your code goes here\n        })\n        .catch(err => {\n            console.log(err);\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.subscribe({\n        Protocol: 'https',\n        Endpoint: 'https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test11/indunil/qa\t',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:TestSNS'\n    }).promise()\n        .then(data => {\n            console.log(data);\n            console.log(event);\n            // your code goes here\n        })\n        .catch(err => {\n            console.log(err);\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -35,7 +35,16 @@
             "resourceName": "apigusEast1sachithraAPInameqaany",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "3719599b-1dcb-4147-a1b3-daeb8d865631": {
+            "id": "3719599b-1dcb-4147-a1b3-daeb8d865631",
+            "name": "Test event",
+            "functionId": "3163a196-1436-40fe-8b51-6cfcd6db73ef",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
       }
     },
     "rootNode": "fb3e86b2-56bc-44cc-8dd2-070030407b0a",
@@ -119,7 +128,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568519338273
+    "lastSave": 1568519694753
   },
   "VCS_STATE": {
     "provider": "GitHub",
